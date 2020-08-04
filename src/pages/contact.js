@@ -1,13 +1,8 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 
 const ContactPage = () => {
   return (
     <>
-      <Helmet>
-        <title>Contact — MFCoder</title>
-        <meta name="description" content="Contact page of MFCoder" />
-      </Helmet>
       <div className="two-grids -contact">
         <div className="post-thumbnail">
           <h1 className="post-title">Subscribe to our newsletter!</h1>

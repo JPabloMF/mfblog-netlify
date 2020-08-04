@@ -39,7 +39,7 @@ body.dark {
   --text-color: rgba(255, 255, 255, 0.88);
   --text-secondary-color: rgba(255, 255, 255, 0.66);
   --site-header: var(--background);
-  --card-bg: #181326;
+  --card-bg: #252f3f;
   --card-bdr: #181326;
   --card-shadow: #020204;
   --btn-bg: var(--background);
@@ -298,6 +298,33 @@ a {
     .post-thumbnail {
       min-height: 140px !important;
     }
+  }
+}
+
+.notfound-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.notfound-title {
+  font-weight: bolder;
+  font-size: 100px;
+  margin: 0;
+}
+.notFound-text {
+  font-size: 20px;
+}
+.notFound-btn {
+  border: 1px solid var(--primary-color);
+  padding: 20px;
+  border-radius: 10px;
+  transition: 300ms;
+  &:hover {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
   }
 }
 /* Portrait and Landscape */
