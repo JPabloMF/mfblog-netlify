@@ -17,6 +17,10 @@ const ContactPage = () => {
             action="https://sendmail.w3layouts.com/SubmitContactForm"
             method="post"
           >
+            <div className="no-display">
+              <label htmlFor="w3lName">Name</label>
+              <input type="text" name="w3lName" id="w3lName" value="default" />
+            </div>
             <div>
               <label htmlFor="w3lSender">Enter your email</label>
               <input
@@ -25,6 +29,23 @@ const ContactPage = () => {
                 id="w3lSender"
                 placeholder="example@mail.com"
               />
+            </div>
+            <div className="no-display">
+              <label htmlFor="w3lSubject">Subject</label>
+              <input
+                type="text"
+                name="w3lSubject"
+                id="w3lSubject"
+                value="default"
+              />
+            </div>
+            <div className="no-display">
+              <label htmlFor="w3lMessage">Message</label>
+              <textarea
+                name="w3lMessage"
+                id="w3lMessage"
+                value="default"
+              ></textarea>
             </div>
             <div>
               <input

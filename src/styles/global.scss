@@ -327,6 +327,9 @@ a {
     color: var(--primary-text-color);
   }
 }
+.no-display{
+  display: none;
+}
 /* Portrait and Landscape */
 @media only screen and (min-width: 768px) {
   .grids {
@@ -348,9 +351,9 @@ a {
     flex-direction: row;
     width: 450px;
   }
-  .post-thumbnail {
-    width: 400px;
-  }
+  // .post-thumbnail {
+  //   width: 400px;
+  // }
 }
 
 // theme-changer
