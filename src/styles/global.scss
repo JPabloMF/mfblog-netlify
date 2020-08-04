@@ -1,4 +1,5 @@
-$font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans,
+  Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 
 html,
 body {
@@ -6,14 +7,14 @@ body {
   padding: 0;
 }
 * {
-  margin-top: 0
+  margin-top: 0;
 }
 body.light {
-  --primary-color: #381696;
+  --primary-color: #4b7bec;
   --primary-text-color: #fff;
-  --featured-bg: #493b8a;
+  --featured-bg: #86abff;
   --featured-text: #fff;
-  --secondary-color: #10072b;
+  --secondary-color: #1d59e6;
   --background: #fff;
   --site-header: var(--background);
   --card-bg: #fff;
@@ -29,14 +30,14 @@ body.light {
   --input-bg: var(--background);
 }
 body.dark {
-  --primary-color: #9984d5;
+  --primary-color: #4b7bec;
   --primary-text-color: #fff;
-  --featured-bg: #66578d;
+  --featured-bg: #86abff;
   --featured-text: #fff;
-  --secondary-color: #66578d;
-  --background: #0A041A;
-  --text-color: rgba(255,255,255,0.88);
-  --text-secondary-color: rgba(255,255,255,0.66);
+  --secondary-color: #86abff;
+  --background: #0a041a;
+  --text-color: rgba(255, 255, 255, 0.88);
+  --text-secondary-color: rgba(255, 255, 255, 0.66);
   --site-header: var(--background);
   --card-bg: #181326;
   --card-bdr: #181326;
@@ -46,9 +47,9 @@ body.dark {
   --btn-text-color: #868892;
   --btn-hover-bg: var(--btn-bdr);
   --btn-hover-text-color: #00062b;
-  --contact-bg: var(--card-shadow);
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
+  --contact-bg: #252f3f;
 }
 /* System Fonts as used by Medium and WordPress */
 body {
@@ -66,11 +67,11 @@ a {
 }
 .site-wrapper {
   padding: 32px;
-  max-width: 1140px;
   margin: 0 auto;
   img {
     max-width: 100%;
   }
+  padding-top: 100px;
 }
 .navigation {
   display: flex;
@@ -95,20 +96,32 @@ a {
 .site-header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
-  background: var(--site-header);
+  padding: 20px 20px;
+  background-color: var(--primary-color);
   margin-bottom: 32px;
   align-items: center;
+  width: calc(100% - 40px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.site-titles-blue {
+  color: var(--primary-color);
+}
+.headline-title {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
 }
 .site-title a {
-  color: var(--primary-color);
+  color: var(--primary-text-color);
   text-decoration: none;
   font-weight: 900;
   text-transform: uppercase;
 }
 .hero-header {
   padding: 0 0 64px;
-  max-width: 980px;
 }
 .headline {
   font-size: 36px;
@@ -126,7 +139,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   margin: 0 20px 0 0;
-  transition: background-color .3s linear;
+  transition: background-color 0.3s linear;
   &.-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -143,14 +156,14 @@ a {
   }
 }
 .primary-content {
-  font-size: 18px;
+  font-size: 25px;
   margin-bottom: 32px;
   line-height: 1.5;
   font-weight: 300;
 }
 .post {
   padding: 0;
-  background:var(--background);
+  background: var(--background);
   color: var(--text-color);
   line-height: 1.5;
   > .blog-post-content {
@@ -171,40 +184,27 @@ a {
     margin-bottom: 32px;
     text-align: center;
   }
-  
 }
 .post-thumbnail {
   text-align: center;
   min-height: 380px;
-  //background-image: url('/assets/circles-light.png');
-  background-color: var(--featured-bg);
+  // background-image: url('/assets/circles-light.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 18px;
   margin-bottom: 36px;
-  color: var(--featured-text);
+  // color: var(--featured-text);
   display: grid;
   align-content: center;
   position: relative;
   padding: 18px;
   overflow: hidden;
-  &:before {
-    content: "";
-    background: rgba(0,0,0,0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
   > * {
     position: relative;
-    z-index: 2;
   }
   .post-meta {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 0;
   }
 }
@@ -260,28 +260,28 @@ a {
   }
 }
 .form-container {
-  background-color: var(--contact-bg);
-  padding: 32px;
-  border: 1px solid var(--contact-bdr);
-  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   label {
     display: block;
     margin-bottom: 0.5rem;
     color: var(--text-secondary-color);
   }
-  input[type=text],
-  input[type=email],
-  textarea {
+  input[type='email'] {
+    font-size: 20px;
     appearance: none;
     border: 1px solid var(--card-shadow);
     color: var(--text-secondary-color);
     border-radius: 6px;
     line-height: 32px;
     padding: 6px 12px;
-    width: calc(100% - 24px);
+    width: calc(100% - 40px);
     margin-bottom: 1.5rem;
-    background-color: var(--input-bg);
+    background-color: var(--primary-text-color);
     font-family: $font-family;
+    padding: 10px 20px;
   }
   textarea {
     margin-bottom: 2rem;
@@ -289,33 +289,42 @@ a {
   }
 }
 .two-grids {
-  display: grid;
-  grid-gap: 32px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
   &.-contact {
+    background-color: var(--contact-bg);
     .post-thumbnail {
-      min-height: 240px !important;
+      min-height: 140px !important;
     }
   }
 }
 /* Portrait and Landscape */
-@media only screen 
-and (min-width: 768px) {
-.grids {
-  grid-template-columns: 1fr 1fr;
+@media only screen and (min-width: 768px) {
+  .grids {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-}
-@media only screen 
-  and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .grids {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .two-grids {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+    flex-direction: row;
+  }
+  .form-container {
+    flex-direction: row;
+    width: 450px;
+  }
+  .post-thumbnail {
+    width: 400px;
   }
 }
-
 
 // theme-changer
 .theme-changer {
@@ -341,29 +350,24 @@ body.light {
   box-sizing: border-box;
   position: relative;
   display: block;
-  transform: scale(var(--ggs,1));
+  transform: scale(var(--ggs, 1));
   width: 24px;
   height: 24px;
-  background:
-    linear-gradient(to bottom,
-        currentColor 4px,transparent 0)
-        no-repeat 5px -6px/2px 6px,
-    linear-gradient(to bottom,
-        currentColor 4px,transparent 0)
-        no-repeat 5px 14px/2px 6px,
-    linear-gradient(to bottom,
-        currentColor 4px,transparent 0)
-        no-repeat -8px 5px/6px 2px,
-    linear-gradient(to bottom,
-        currentColor 4px,transparent 0)
-        no-repeat 14px 5px/6px 2px;
+  background: linear-gradient(to bottom, currentColor 4px, transparent 0)
+      no-repeat 5px -6px/2px 6px,
+    linear-gradient(to bottom, currentColor 4px, transparent 0) no-repeat 5px
+      14px/2px 6px,
+    linear-gradient(to bottom, currentColor 4px, transparent 0) no-repeat -8px 5px/6px
+      2px,
+    linear-gradient(to bottom, currentColor 4px, transparent 0) no-repeat 14px
+      5px/6px 2px;
   border-radius: 100px;
   box-shadow: inset 0 0 0 2px;
-  border: 6px solid transparent
+  border: 6px solid transparent;
 }
 .gg-sun::after,
 .gg-sun::before {
-  content: "";
+  content: '';
   display: block;
   box-sizing: border-box;
   position: absolute;
@@ -372,36 +376,36 @@ body.light {
   border-right: 4px solid;
   border-left: 4px solid;
   left: -6px;
-  top: 5px
+  top: 5px;
 }
 .gg-sun::before {
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
 }
 .gg-sun::after {
-  transform: rotate(45deg)
+  transform: rotate(45deg);
 }
 .gg-moon,
 .gg-moon::after {
-    display: block;
-    box-sizing: border-box;
-    border-radius: 50%
+  display: block;
+  box-sizing: border-box;
+  border-radius: 50%;
 }
 .gg-moon {
-    overflow: hidden;
-    position: relative;
-    transform: rotate(-135deg) scale(var(--ggs,1));
-    width: 20px;
-    height: 20px;
-    border: 2px solid;
-    border-bottom-color: transparent
+  overflow: hidden;
+  position: relative;
+  transform: rotate(-135deg) scale(var(--ggs, 1));
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-bottom-color: transparent;
 }
 .gg-moon::after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 18px;
-    border: 2px solid transparent;
-    box-shadow: 0 0 0 2px;
-    top: 8px;
-    left: 2px
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 18px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px;
+  top: 8px;
+  left: 2px;
 }
