@@ -4,6 +4,6 @@
   "description": "I am Juan Pablo and this is my blog where I post about technology, art, languages, and more!",
   "home": {
     "title": "Hi! I'm Juan Pablo",
-    "description": "> Front End Developer\n>\n> 👋I'm Juan Pablo a Front End dev 👨‍💻 from Colombia .\n\nI love learning new things every day 🤓📚.\n\nI enjoy teamwork and teaching my knowledge of HTML, CSS and, JAVASCRIPT things.\n\nFuture game dev 🎮"
+    "description": "<!--StartFragment-->\n\nAnd this is my blog where I post\n\n<!--EndFragment-->\n\n<!--StartFragment-->\n\nabout technology advices, code,\n\n<!--EndFragment-->\n\n<!--StartFragment-->\n\nsnippets and more!\n\n<!--EndFragment-->"
   }
 }
