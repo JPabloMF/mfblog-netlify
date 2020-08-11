@@ -33,6 +33,7 @@ In this post, you will learn about every data type that JavaScript has.
 4. Boolean
 5. null
 6. undefined
+7. Symbol
 
 Because their values can contain only a single thing (be it a string or a number or whatever).
 
