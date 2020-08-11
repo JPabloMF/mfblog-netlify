@@ -35,6 +35,8 @@ let decimal = 34.00
 1. Infinity
 2. NaN
 
+
+
 * **Infinity:**
 
   It represents the mathematical Infinity ∞.
@@ -45,4 +47,17 @@ let decimal = 34.00
 ```javascript
 console.log("not a number" / 2); // NaN
 // the result is not a number because We divided a string by a number
+```
+
+## BigInt
+
+In JavaScript, the “number” type cannot represent integer values larger than`(253-1)`(that’s`9007199254740991`), or less than`-(253-1)`for negatives. It’s a technical limitation caused by their internal representation.
+
+Sometimes we need really big numbers, e.g. for cryptography or microsecond-precision timestamps.
+
+`BigInt`type was recently added to the language to represent integers of arbitrary length.
+
+```javascript
+// the "n" at the end means it's a BigInt
+const bigInt = 1234567890123456789012345678901234567890n;
 ```
