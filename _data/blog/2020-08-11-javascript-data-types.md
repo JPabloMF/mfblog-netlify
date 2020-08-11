@@ -95,3 +95,23 @@ console.log( `the result is ${1 + 2}` ); // the result is 3
 let nameFieldChecked = true; // yes, name field is checked
 let ageFieldChecked = false; // no, age field is not checked
 ```
+
+Boolean values also come as a result of comparisons:
+
+```javascript
+let isGreater = 4 > 1;
+
+alert( isGreater ); // true (the comparison result is "yes")
+```
+
+## null
+
+In JavaScript,`null` is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
+
+It’s just a special value that represents “nothing”, “empty” or “value unknown”.
+
+```javascript
+let age = null;
+```
+
+The code above states that `age` is unknown.
