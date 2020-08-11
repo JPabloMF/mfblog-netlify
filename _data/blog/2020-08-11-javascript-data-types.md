@@ -61,3 +61,37 @@ Sometimes we need really big numbers, e.g. for cryptography or microsecond-preci
 // the "n" at the end means it's a BigInt
 const bigInt = 1234567890123456789012345678901234567890n;
 ```
+
+## String
+
+A string in JavaScript must be surrounded by quotes.
+
+**In JavaScript, there are 3 types of quotes.**
+
+1. Double quotes:`"Hello"`.
+2. Single quotes:`'Hello'`.
+3. Backticks:`` `Hello` ``.
+
+Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in`${…}`, for example:
+
+```javascript
+let name = "John";
+
+// embed a variable
+console.log( `Hello, ${name}!` ); // Hello, John!
+
+// embed an expression
+console.log( `the result is ${1 + 2}` ); // the result is 3
+```
+
+## Boolean
+
+**The boolean type has only two possible values:**
+
+* true
+* false
+
+```javascript
+let nameFieldChecked = true; // yes, name field is checked
+let ageFieldChecked = false; // no, age field is not checked
+```
