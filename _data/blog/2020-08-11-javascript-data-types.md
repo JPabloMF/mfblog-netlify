@@ -164,3 +164,39 @@ And for each `key`, you have to define` value `using any of the **primitive valu
 ```javascript
 {name: 'Shaun', lastName: 'Jhonson', age: 54}
 ```
+
+**Symbol**
+
+The `Symbol()`function returns a value of type **symbol**, has static properties that expose several members of built-in objects, has static methods that expose the global symbol registry, and resembles a built-in object class, but is incomplete as a constructor because it does not support the syntax "`new Symbol()`"
+
+To create a new primitive symbol, you write`Symbol()`with an optional string as its description:
+
+```javascript
+let sym1 = Symbol()
+let sym2 = Symbol('foo')
+let sym3 = Symbol('foo')
+```
+
+The above code creates three new symbols. Note that`Symbol("foo")`does not coerce the string`"foo"`into a symbol. It creates a new symbol each time:
+
+```javascript
+Symbol('foo') === Symbol('foo')  // false
+```
+
+The following syntax with the `new `operator will throw a `TypeError`:
+
+```javascript
+let sym = new Symbol()  // TypeError
+```
+
+
+
+And that's it for this post
+
+For more references review these links:
+
+<https://javascript.info/types>
+
+<https://www.w3schools.com/js/js_datatypes.asp>
+
+<https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures>
