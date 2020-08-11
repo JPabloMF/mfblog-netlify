@@ -142,4 +142,24 @@ let age;
 console.log(age); // shows "undefined"
 ```
 
-Objects
+## Objects
+
+Basically, an Object is a collection of data
+
+We need to have in mind the following structure for each object that You create:
+
+```javascript
+{key: value}
+```
+
+So We have to close our data in keys `{}`
+
+Then we have a `key`, there you can use any name that you want, for example, age, name, gender, etc.
+
+And for each `key`, you have to define` value `using any of the **primitive values.**
+
+**Example:**
+
+```javascript
+{name: 'Shaun', lastName: 'Jhonson', age: 54}
+```
