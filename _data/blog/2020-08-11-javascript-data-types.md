@@ -21,6 +21,21 @@ In this post, you will learn about every data type that JavaScript has.
 7. Object
 8. Symbols
 
+
+
+## Primitive values
+
+**Primitive values are:**
+
+1. Number
+2. BigInt
+3. String
+4. Boolean
+5. null
+6. undefined
+
+Because their values can contain only a single thing (be it a string or a number or whatever).
+
 ## Number
 
 The number type represents both integer and floating-point numbers (decimals).
@@ -115,3 +130,16 @@ let age = null;
 ```
 
 The code above states that `age` is unknown.
+
+## undefined
+
+The meaning of `undefined` is “value is not assigned”.
+
+If a variable is declared, but not assigned, then its value is `undefined`:
+
+```javascript
+let age;
+console.log(age); // shows "undefined"
+```
+
+Objects
