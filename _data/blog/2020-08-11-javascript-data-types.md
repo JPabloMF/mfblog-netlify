@@ -21,8 +21,6 @@ In this post, you will learn about every data type that JavaScript has.
 7. Object
 8. Symbols
 
-
-
 ## Primitive values
 
 **Primitive values are:**
@@ -51,8 +49,6 @@ let decimal = 34.00
 1. Infinity
 2. NaN
 
-
-
 * **Infinity:**
 
   It represents the mathematical Infinity ∞.
@@ -67,7 +63,7 @@ console.log("not a number" / 2); // NaN
 
 ## BigInt
 
-In JavaScript, the “number” type cannot represent integer values larger than`(253-1)`(that’s`9007199254740991`), or less than`-(253-1)`for negatives. It’s a technical limitation caused by their internal representation.
+In JavaScript, the “number” type cannot represent integer values larger than`(2^53-1)`(that’s`9007199254740991`), or less than`-(2^53-1)`for negatives. It’s a technical limitation caused by their internal representation.
 
 Sometimes we need really big numbers, e.g. for cryptography or microsecond-precision timestamps.
 
@@ -157,7 +153,7 @@ So We have to close our data in keys `{}`
 
 Then we have a `key`, there you can use any name that you want, for example, age, name, gender, etc.
 
-And for each `key`, you have to define` value `using any of the **primitive values.**
+And for each `key`, you have to define`value`using any of the **primitive values.**
 
 **Example:**
 
@@ -183,13 +179,11 @@ The above code creates three new symbols. Note that`Symbol("foo")`does not coerc
 Symbol('foo') === Symbol('foo')  // false
 ```
 
-The following syntax with the `new `operator will throw a `TypeError`:
+The following syntax with the `new`operator will throw a `TypeError`:
 
 ```javascript
 let sym = new Symbol()  // TypeError
 ```
-
-
 
 And that's it for this post
 
