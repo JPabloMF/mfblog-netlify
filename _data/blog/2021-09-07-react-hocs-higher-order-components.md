@@ -57,7 +57,7 @@ const higherOrderComponent = (WrappedComponent) => {
 };
 ```
 
-We can see that `higherOrderComponent `takes a component`(WrappedComponent)`and returns another component inside of it. With this technique, whenever we need to reuse a particular component’s logic for something, we can create a HOC out of that component and use it wherever we like.
+We can see that `higherOrderComponent`takes a component`(WrappedComponent)`and returns another component inside of it. With this technique, whenever we need to reuse a particular component’s logic for something, we can create a HOC out of that component and use it wherever we like.
 
 ### Use cases
 
@@ -108,5 +108,10 @@ class App extends React.Component {
   }
 }
 export default App;
-
 ```
+
+Hope you enjoyed this article 👋😊
+
+For more references review this link:
+
+<https://www.smashingmagazine.com/2020/06/higher-order-components-react/>
