@@ -28,6 +28,13 @@ body.light {
   --contact-bg: #f7f8fe;
   --contact-bdr: #d3d6e7;
   --input-bg: var(--background);
+  // Tech colors
+  --html: #e54f27;
+  --css: #0172be;
+  --js: #ffcc14;
+  --react: #282c34;
+  --sass: #cc6699;
+  --white: #fff;
 }
 body.dark {
   --primary-color: #4b7bec;
@@ -50,6 +57,13 @@ body.dark {
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
   --contact-bg: #252f3f;
+  // Tech colors
+  --html: #e54f27;
+  --css: #0172be;
+  --js: #ffcc14;
+  --react: #282c34;
+  --sass: #cc6699;
+  --white: #fff;
 }
 /* System Fonts as used by Medium and WordPress */
 body {
@@ -157,7 +171,6 @@ a {
 }
 .primary-content {
   font-size: 25px;
-  margin-bottom: 32px;
   line-height: 1.5;
   font-weight: 300;
 }
@@ -214,6 +227,11 @@ a {
   grid-gap: 32px;
   margin-top: 32px;
 }
+.grid-topics {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
 .card {
   display: grid;
   background-color: var(--card-bg);
@@ -222,8 +240,11 @@ a {
   box-shadow: 0 0 30px var(--card-shadow);
   overflow: hidden;
   line-height: 1.5;
-  &:hover .post-link {
-    color: var(--primary-color);
+  padding: 20px;
+  transition: 300ms;
+  &:hover {
+    text-decoration: none;
+    transform: scale(1.1);
   }
   > a img {
     display: block;
@@ -244,8 +265,62 @@ a {
   }
   .post-link {
     color: var(--text-color);
-    text-decoration: none;
   }
+}
+.topic-card {
+  max-width: 170px;
+  max-height: 94px;
+  margin: 0 10px;
+  background-color: var(--card-bg);
+  border-radius: 9px;
+  border: 1px solid var(--card-bdr);
+  box-shadow: 0 0 30px var(--card-shadow);
+  overflow: hidden;
+  line-height: 1.5;
+  transition: 300ms;
+  padding: 10px;
+  text-align: center;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: 300ms;
+  > img {
+    height: 100%;
+  }
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  &.active{
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  &.html{
+    background-color: var(--html);
+  }
+  &.css{
+    background-color: var(--css);
+  }
+  &.javascript{
+    background-color: var(--js);
+  }
+  &.react{
+    background-color: var(--react);
+  }
+  &.unity{
+    background-color: var(--white);
+  }
+  &.git{
+    background-color: var(--white);
+  }
+  &.node{
+    background-color: var(--white);
+  }
+  &.sass{
+    background-color: var(--sass);
+  }
+}
+.choose-topic{
+  text-align: center;
 }
 .post-meta {
   font-size: 0.8rem;

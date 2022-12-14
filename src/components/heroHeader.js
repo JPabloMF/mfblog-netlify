@@ -18,7 +18,7 @@ export default () => (
     `}
     render={(data) => (
       <div className="hero-header">
-        <div className="headline-title">¡Hello!</div>
+        <div className="headline-title">Welcome to my blog!</div>
         <div className="headline site-titles-blue">
           {data.site.siteMetadata.home.title}
         </div>
@@ -31,7 +31,7 @@ export default () => (
         {/* <Link to="/contact" className="button -primary">
           Get in touch &rarr;
         </Link> */}
-        <ContactPage/>
+        {/* <ContactPage/> */}
       </div>
     )}
   />
