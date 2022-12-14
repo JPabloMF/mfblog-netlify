@@ -1,7 +1,8 @@
 import React from "react"
 import Helmet from 'react-helmet';
-import { graphql } from "gatsby"
+import { graphql, navigate } from "gatsby";
 import Layout from "../components/layout"
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -12,12 +13,13 @@ export default function Template({
   return (
     <Layout>
       <Helmet>
-        <title>{frontmatter.title} | {siteMetadata.title}</title>
+        <title>
+          {frontmatter.title} | {siteMetadata.title}
+        </title>
         <meta name="description" content={frontmatter.metaDescription} />
       </Helmet>
       <div className="blog-post-container">
         <article className="post">
-          
           {!frontmatter.thumbnail && (
             <div className="post-thumbnail">
               <h1 className="post-title">{frontmatter.title}</h1>
@@ -25,7 +27,10 @@ export default function Template({
             </div>
           )}
           {!!frontmatter.thumbnail && (
-            <div className="post-thumbnail" style={{backgroundImage: `url(${frontmatter.thumbnail})`}}>
+            <div
+              className="post-thumbnail"
+              style={{ backgroundImage: `url(${frontmatter.thumbnail})` }}
+            >
               <h1 className="post-title">{frontmatter.title}</h1>
               <div className="post-meta">{frontmatter.date}</div>
             </div>
@@ -35,9 +40,10 @@ export default function Template({
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </article>
+        <button className="back-button" onClick={() => navigate(-1)}><FaArrowLeft /></button>
       </div>
     </Layout>
-  )
+  );
 }
 
 export const pageQuery = graphql`
