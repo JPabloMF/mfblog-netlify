@@ -2,7 +2,7 @@
 template: BlogPost
 path: /javascript/use-strict
 date: 2020-11-10T01:32:03.560Z
-title: "The modern mode \"use strict\" \U0001F1EC\U0001F1E7"
+title: "\U0001F1EC\U0001F1E7 The modern mode \"use strict\""
 metaDescription: use strict in javascript
 thumbnail: /assets/js.png
 ---
