@@ -285,6 +285,9 @@ a {
   }
 }
 .topic-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 170px;
   max-height: 94px;
   margin: 0 10px;
@@ -301,7 +304,7 @@ a {
   cursor: pointer;
   transition: 300ms;
   > img {
-    height: 100%;
+    object-fit: cover;
   }
   &:hover {
     opacity: 1;
