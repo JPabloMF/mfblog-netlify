@@ -2,7 +2,7 @@
 template: BlogPost
 path: /react/hocs
 date: 2021-09-07T01:28:08.085Z
-title: React HOCs (Higher-Order Components)
+title: "React HOCs (Higher-Order Components) \U0001F1EC\U0001F1E7"
 metaDescription: React Higher-Order Components
 thumbnail: /assets/react.png
 ---
