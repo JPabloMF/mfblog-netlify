@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import ContactPage from '../pages/contact';
 
 export default () => (
@@ -28,6 +29,20 @@ export default () => (
             __html: data.site.siteMetadata.home.description,
           }}
         />
+        <div className="icons">
+          <a href="https://twitter.com/_MFcoder_" target="_blank">
+            <FaTwitter />
+          </a>
+          <a
+            href="https://co.linkedin.com/in/juan-pablo-mu%C3%B1oz-alvarez-a9719914b"
+            target="_blank"
+          >
+            <FaLinkedinIn />
+          </a>
+          <a href="https://github.com/JPabloMF" target="_blank">
+            <FaGithub />
+          </a>
+        </div>
         {/* <Link to="/contact" className="button -primary">
           Get in touch &rarr;
         </Link> */}
