@@ -30,7 +30,7 @@ export default () => (
           }}
         />
         <div className="icons">
-          <a href="https://twitter.com/_MFcoder_" target="_blank">
+          <a href="https://twitter.com/JPabloMF" target="_blank">
             <FaTwitter />
           </a>
           <a
