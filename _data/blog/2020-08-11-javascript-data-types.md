@@ -2,9 +2,9 @@
 template: BlogPost
 path: /javascript/data-types
 date: 2020-08-11T02:09:56.748Z
-title: "JavaScript Data types \U0001F1EC\U0001F1E7"
+title: "\U0001F1EC\U0001F1E7 JavaScript Data types"
 metaDescription: javascript data types
-thumbnail: /assets/js.png
+thumbnail: ''
 ---
 # Data types
 
