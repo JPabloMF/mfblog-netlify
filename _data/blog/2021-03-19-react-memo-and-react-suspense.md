@@ -2,7 +2,7 @@
 template: BlogPost
 path: /react/hooks/react-memo-lazy-suspense
 date: 2021-03-19T19:32:17.728Z
-title: "React.memo, React.lazy and React.suspense \U0001F1EC\U0001F1E7"
+title: "\U0001F1EC\U0001F1E7 React.memo, React.lazy and React.suspense"
 metaDescription: 'Learn what is React.memo, React.suspense and React.lazy'
 thumbnail: /assets/react.png
 ---
