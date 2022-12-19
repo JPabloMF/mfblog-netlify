@@ -127,3 +127,86 @@ Este usa la regla de `@media` para incluir un bloque de propiedades de CSS unica
 **Ejemplo**
 
 Si la ventana del navegador es de `600px` o mas pequeña, el `background-color` se tornara azul claro
+
+```css
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+```
+
+### Siempre diseña para movil primero
+
+Movil primero o (Mobile First en Ingles) significa diseñar para movil antes de diseñar para escritorio o cualquier otro dispositivo (Esto hara a la pagina mostrarse mas rapido en dispositivos moviles)
+
+Esto significa que debemos hacer algunos cambios en nuestro CSS.
+
+En lugar de cambiar los estilos cuando el ancho sea mas pequeño que 768px, debemos cambiar el diseño cuando el ancho sea mas grande que 768px. Esto hara que nuestro diseño sea Mobile First:
+
+```css
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+}
+```
+
+### Media Queries tipicas por dispositivo
+
+Hay un monton de pantallas y dispositivos con diferente alturas y anchuras, entonces es dificil crear un media query exacto para cada dispositivo. Para mantener las cosas simples nos enfocaremos en cinco grupos:
+
+```css
+/* Dispositivos extra pequeños (moviles, 600px y por debajo) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+```
+
+### Orientación: Portrait / Landscape
+
+Los media queries tambien pueden ser usados para cambiar la apariencia de una pagina dependiendo de la orientacion del navegador.
+
+![](/assets/Untitled(5).png)
+
+Puedes tener una serie de propiedades de CSS que se aplicaran unicamente cuando la ventana del navegador sea mas ancha que su alto, esto es llamado orientacion “Landscape”
+
+**Ejemplo:**
+
+La pagina web tendra un fondo azul claro cuando la orientacion sea landscape:
+
+```css
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
+  }
+}
+```
+
+### Ocultar elementos con media queries
+
+Otro uso comun de los media queries, es ocultar elementos en diferentes tamaños de pantalla:
+
+**Ejemplo:**
+
+```css
+/* Si el tamaño de la pantalla es 600px de ancho o menos, oculte el elemento */
+@media only screen and (max-width: 600px) {
+  div.example {
+    display: none;
+  }
+}
+```
