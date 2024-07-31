@@ -8,7 +8,7 @@ thumbnail: ''
 ---
 ## Que es responsive web design?
 
-Responsive web design hace que nuestras paginas web luzcan bien en todos los dispositivos
+Responsive web design hace que nuestras paginas web luzcan bien en todos los dispositivos.
 
 Responsive web design usa unicamente HTML y CSS.
 
