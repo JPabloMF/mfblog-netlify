@@ -1,7 +1,7 @@
 ---
 template: BlogPost
 path: /css/responsive
-date: 2022-12-14T20:38:29.128Z
+date: 2024-07-31T20:38:29.128Z
 title: "\U0001F1EA\U0001F1F8 Responsive design"
 metaDescription: Learn about responsive web design
 thumbnail: ''
